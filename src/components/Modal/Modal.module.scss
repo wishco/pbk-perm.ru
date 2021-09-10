@@ -1,0 +1,160 @@
+.modal {
+  height: 100vh;
+  width: 100vw;
+  min-width: 320px;
+  position: fixed;
+  background-color: black;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 9999 !important;
+  align-items: center;
+  pointer-events: all;
+}
+
+.wrapper {
+  z-index: 10000 !important;
+  position: fixed;
+}
+
+[data-modal-type="center"] {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+[data-modal-type="fullScreen"] {
+  width: 100%;
+  display: block;
+}
+
+
+.wrapperAnimation {
+  transition-timing-function: cubic-bezier(0.1, 0, 0.2, 3);
+  //transition-property: all;
+  //transition: all;
+}
+
+.content {
+  outline: none !important; // удалить показ фокуса формы, но фокус нужен, что бы установить предел перехода shift+tab по атрибуту start
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: default;
+  padding: 20px 25px 20px 25px;
+  min-width: 250px;
+  box-shadow: 0px 0px 11px 3px rgba(0,0,0,0.5);
+  border: solid 2px white;
+  background-color: #fff;
+  z-index: 10000 !important;
+  justify-content: center;
+  align-items: center;
+}
+
+[data-modal-lock="true"].content {
+  pointer-events: none;
+}
+
+[data-modal-lock="true"].preloader-5 {
+  display: block;
+}
+
+
+
+
+.item {
+  //background-color: red;
+  display: flex;
+  //color: #000;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: flex-start;
+  border-radius: 20px;
+}
+
+.windowHeader {
+  position: absolute;
+  color: var(--font_color);
+  background-color: var(--header_color);
+  top: 0;
+  left: 0px;
+  padding: 0px 0px 0px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  //border-top-right-radius: 14px;
+  //border-top-left-radius: 14px;
+  z-index: 10000 !important;
+}
+
+.windowTitle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  //width: 100%;
+  pointer-events: none;
+  color: var(--bg_color);
+}
+
+.windowClose {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //background-color: var(--active_color);
+  background-color: var(--header_color);
+  height: 35px;
+  width: 40px;
+  cursor: pointer;
+  &:before {
+    content: "";
+    position: absolute;
+    background-color: var(--bg_color);
+    display: block;
+    width: 16px;
+    height: 2px;
+    transform: rotate(-45deg);
+    pointer-events: none;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    background-color: var(--bg_color);
+    display: block;
+    width: 16px;
+    height: 2px;
+    transform: rotate(45deg);
+    pointer-events: none;
+  }
+  &:hover {
+    background-color: var(--action_color_light);
+    &:before, &:after {
+      background-color: var(--bg_color);
+    }
+  }
+  &:active {
+    background-color: var(--action_color_light);
+    &:before, &:after {
+      background-color: var(--bg_color);
+    }
+  }
+  &:active:hover {
+     background-color: var(--action_color_dark);
+     &:before, &:after {
+       background-color: var(--font_color);
+     }
+   }
+}
+
+.closeBox {
+  position: absolute;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  &:focus {
+    border: 2px solid black;
+  }
+}
+
+

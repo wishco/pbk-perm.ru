@@ -1,0 +1,24 @@
+
+#root {
+  position: relative;
+}
+
+.wrapSite { // сайт состоит из двух частей, ОСНОВНАЯ это ВЕРХ и примыкающий низ (верх это 100% минус низ)
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  //height: 100vh;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+

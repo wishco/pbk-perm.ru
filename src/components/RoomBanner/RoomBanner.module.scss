@@ -1,0 +1,127 @@
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  margin: var(--gutter1);
+  align-content: space-between;
+  //border: calc(var(--gutter1)/2) solid var(--bg_color_add3);
+  height: 200px;
+  min-width: 280px;
+  max-width: 310px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  flex-wrap: nowrap;
+}
+
+.wrapper:last-child {
+  margin-bottom: 20px;
+}
+
+.image {
+  display: flex;
+  object-fit: cover;
+  margin-right: var(--gutter1);
+
+}
+
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px;
+}
+
+.textsWrapper {
+  position: relative;
+  flex-wrap: nowrap;
+  display: flex;
+  //background-color: pink;
+  justify-content: space-between;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.texts {
+  display: flex;
+  flex-wrap: wrap;
+  //align-items: start;
+  cursor: default;
+}
+
+.text1 {
+  width: 100%;
+  display: flex;
+  //background-color: red;
+  flex-wrap: wrap;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+.text2 {
+  width: 100%;
+  display: flex;
+  //background-color: green;
+  flex-wrap: wrap;
+  font-size: 1em;
+}
+
+.text3 {
+  display: flex;
+  //background-color: green;
+  flex-wrap: wrap;
+  font-size: 1em;
+}
+
+.button {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: pink;
+  border-radius: 10px;
+}
+
+[data-style="room-banner-path"] {
+  fill: var(--bg_color_add3);
+}
+
+[data-style="room-banner-svg"] {
+  display: flex;
+  align-items: start;
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  width: 30%;
+  cursor: pointer;
+}
+//@media screen and (max-width: 1440px){
+//  .wrapper {
+//    max-width: 440px;
+//  }
+//}
+
+@media screen and  (min-width : 800px) and (max-width : 1440px){
+  .wrapper {
+    max-width: calc( 340px + (400 - 340) * (100vw - 800px)/(1024 - 800) )
+  }
+}
+
+@media screen and  (max-width : 800px){
+  .wrapper {
+    max-width: 420px;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .box {
+    margin: 20px 0px 20px 0px;
+  }
+  .wrapper {
+     max-width: 320px;
+  }
+
+}

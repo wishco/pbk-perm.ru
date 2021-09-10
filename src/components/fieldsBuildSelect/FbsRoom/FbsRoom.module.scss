@@ -1,0 +1,123 @@
+.box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1em;
+  width: 100%;
+  padding-top: 0.5em;
+  margin-bottom: 1em;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-left: solid 5px var(--active_color_add1);
+  transition: 0.5s;
+  min-height: 50px;
+}
+
+[data-warning="true"].box {
+  border-left-color: var(--active_color_dark);
+}
+
+.room {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0px;
+  transition: 0.3s;
+  width: 40px;
+  height: 25px;
+  padding: 0 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: var(--action_color_add1);
+
+  &:after {
+    position: absolute;
+    content: "";
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-sizing: content-box;
+    border-radius: 7px;
+    z-index: 9999999;
+  }
+
+  &:hover {
+    //background-color: var(--action_color_light);
+    //color: var(--bg_color);
+
+    color: var(--action_color_light);
+    &:active {
+      background-color: var(--action_color_dark);
+      color: var(--bg_color);
+      &:after {
+        border: none;
+      }
+    }
+    &:after {
+        border: solid 2px var(--action_color_light);
+
+    }
+  }
+}
+
+[data-active="true"].room {
+  background-color: var(--action_color);
+  color: var(--bg_color);
+}
+
+.roomsManyWrap {
+  margin-top: -10px 0px 0 0px;
+  padding: 10px 10px;
+  color: var(--font_color_add1);
+  font-size: 15px;
+  text-align: left;
+  line-height: 1.3;
+  cursor: default;
+}
+.roomsManyTitle {
+  font-size: inherit;
+  margin: 0px 5px 5px 5px;
+}
+.roomsManyTitle i {
+  font-size: inherit;
+  font-weight: 600;
+}
+
+.roomsManyText {
+  font-size: inherit;
+  margin: 0 5px;
+}
+.filterItems {
+  color: var(--active_color_dark);
+  font-size: inherit;
+}
+.filterItems li {
+  font-size: inherit;
+  margin-left: 20px;
+  line-height: 1.1;
+
+}
+.filterItems li span {
+  font-size: inherit;
+  color: var(--font_color_add1);
+}
+
+@media screen and (max-width: 720px) {
+  //.box {
+  //  font-size: calc(0.5em + (1 - 0.5) * (100vw - 23em) / (45 - 23));
+  //}
+}
+
+@media screen and (max-width: 370px) {
+  //.box {
+  //  font-size: 0.5em;
+  //}
+}

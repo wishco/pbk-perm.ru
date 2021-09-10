@@ -1,0 +1,100 @@
+@keyframes rotateCallMe {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.contact {
+  line-height: 1;
+  font-size: 18px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+
+}
+
+.tel {
+  font-size: 1.7em;
+  font-weight: 600;
+  margin-bottom: 0.2em;
+  cursor: pointer;
+  color: var(--font_color_add1);
+}
+
+.callMe {
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: inherit;
+  cursor: pointer;
+  margin-bottom: 10px;
+  &:hover {
+    svg {
+      animation: rotateCallMe 1.5s linear infinite;
+      path {
+        fill: var(--action_color_add1);
+        transition: fill .7s ease;
+      }
+    }
+
+    a {
+      color: #8b0000;
+      transition: color .7s ease;
+    }
+  }
+  &:active {
+    svg {
+      animation: rotateCallMe 1.5s linear infinite paused;
+    }
+  }
+
+  svg {
+    font-size: inherit;
+    margin-right: 5px;
+    animation: rotateCallMe 1.5s linear infinite paused;
+    width: 1.055em;
+    height: 1.055em;
+
+    path {
+      fill: var(--action_color);
+      transition: fill .5s ease;
+    }
+  }
+
+  a {
+    font-size: 1em;
+    color: var(--action_color);
+    transition: color .5s ease;
+
+  }
+}
+
+.svg {
+  width: 100%;
+}
+
+//----------------------------------------------------------------------------------
+@media screen and (max-width: 900px) {
+  .contact {
+    font-size: 15px;
+  }
+}
+//----------------------------------------------------------------------------------
+@media screen and (max-width: 600px) {
+  .contact {
+    font-size: 11px;
+  }
+}
+//----------------------------------------------------------------------------------
+@media screen and (max-width: 505px) {
+  .contact {
+    width: 100%;
+  }
+}

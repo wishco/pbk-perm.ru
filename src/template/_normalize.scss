@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+
+}
+
+* {
+  font-family: montserrat, 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: 400;
+  font-size: 16px; // размерная еденица для 'em', для всего сайта
+  &::placeholder {
+    font-family: montserrat, 'Arial', sans-serif;
+  }
+  &:focus {
+    outline: none;
+  }
+
+}
+
+
+
+
+b {
+  font-weight: 600;
+}
+
+
+h1, h2, h3, ul, li, p, a, div {
+  margin: 0;
+  padding: 0;
+}
+
+
+h1 {
+  font-size: 18px;
+  cursor: default;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+}
+
+
+body {
+  position: relative;
+  line-height: 1.65;
+  letter-spacing: 0;
+  overflow-x: hidden;
+  opacity: 1;
+}
+
+svg {
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  image-rendering: optimizeQuality;
+  fill-rule: evenodd;
+  clip-rule: evenodd;
+}
+
+select:invalid {
+  color: gray;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+p {
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+input {
+  border: solid 1px black;
+}
+
+

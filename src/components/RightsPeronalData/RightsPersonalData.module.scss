@@ -1,0 +1,15 @@
+.wrapper {
+  font-size: 0.55em;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.checkBoxWrapper {
+  font-size: 1em; // от размера шрифта изменяется размер checkbox
+}
+

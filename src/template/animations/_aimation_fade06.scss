@@ -1,0 +1,33 @@
+
+[data-anim-type-fade06] {
+  //background-color: red;
+  display: none;
+}
+
+[data-anim-type-fade06][data-anim-value="open"] {
+    opacity: 0;
+    display: flex;
+}
+[data-anim-type-fade06][data-anim-value="opening"] {
+  opacity: 0.6;
+  display: flex;
+
+}
+[data-anim-type-fade06][data-anim-value="opened"] {
+  opacity: 0.6;
+  display: flex;
+
+}
+[data-anim-type-fade06][data-anim-value="close"] {
+  opacity: 0.6;
+  display: flex;
+}
+[data-anim-type-fade06][data-anim-value="closing"] {
+  opacity: 0;
+  display: flex;
+}
+[data-anim-type-fade06][data-anim-value="closed"] {
+  opacity: 0;
+  display: none;
+}
+

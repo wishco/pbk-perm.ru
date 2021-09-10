@@ -1,0 +1,32 @@
+
+
+.a {
+  &.open {
+    opacity: 0;
+    display: flex;
+  }
+  &.opening {
+    opacity: 0.6;
+    display: flex;
+  }
+  &.opened {
+    opacity: 0.6;
+    display: flex;
+  }
+  &.close {
+    opacity: 0.6;
+    display: flex;
+  }
+  &.closing {
+    opacity: 0;
+    display: flex;
+  }
+  &.closed {
+    opacity: 0;
+    display: none;
+  }
+  &.active {
+    display: flex;
+    opacity: 0.6;
+  }
+}

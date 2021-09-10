@@ -1,0 +1,44 @@
+.wrapper{
+  //max-width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 500px;
+  box-sizing: border-box;
+}
+
+.wrapperMap{
+  width: calc(100vw - 30px); // не 100% что бы в мобилке справа было место для скролла
+  //min-height: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+
+}
+
+@media screen and (max-width: 1280px) {
+  .wrapper{
+    height: calc( 370px + (500  - 370) * (100vw - 370px)/(1280 - 370) )
+  }
+  .wrapperMap{
+    //min-height: calc( 300px + (500  - 300) * (100vw - 1024px)/(1280 - 370) );
+    height: calc( 370px + (500  - 370) * (100vw - 370px)/(1280 - 370) );
+  }
+}
+@media screen and (max-width: 370px){
+  .wrapper{
+    height: 370px;
+  }
+
+}
+
+
+@media screen and (max-width: 320px){
+  .wrapper{
+
+  }
+  .wrapperMap{
+    min-width: 290px;
+    justify-content: center;
+  }
+}

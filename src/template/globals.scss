@@ -1,0 +1,31 @@
+@import "./vars_all";
+@import "./themes/themes";
+@import "./normalize";
+@import "./own_classes";
+@import "./own_backgrounds";
+@import "./own_flex";
+@import "animations/aimation_fade";
+@import "animations/aimation_fade06";
+@import "animations/animation_scale";
+@import "animations/aimation_right";
+@import "animations/aimation_left";
+@import "animations/aimation_top";
+@import "animations/aimation_bottom";
+@import "./preloader5";
+
+
+
+
+
+.red {
+  background-color: red;
+}
+.gre {
+  background-color: green;
+}
+.blu {
+  background-color: blue;
+}
+.pin {
+  background-color: pink;
+}

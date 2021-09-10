@@ -1,0 +1,55 @@
+
+
+.textarea {
+  background-color: #ffffff;
+  width: 100%;
+  resize: none;
+  margin: 10px;
+  border: solid 1px gray;
+  padding: 10px;
+}
+
+.submit {
+  cursor: pointer;
+  text-align: center;
+  background-color: green;
+  color: white;
+  visibility: hidden;
+
+}
+
+.goodStructure {
+  visibility: visible;
+  margin: 5px;
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin-left: 40px;
+}
+
+.passCaption {
+  margin-right: 5px;
+}
+
+.input {
+  border: solid 1px gray;
+  display: inline-block;
+  padding-left: 5px;
+  border-radius: 2px;
+}
+
+.sendStatusOff {
+  display: none;
+  margin: 10px;
+  text-align: center;
+}
+
+.sendStatusError {
+  display: block;
+  color: red;
+
+}
+
+.sendStatusGood {
+  display: block;
+  color: green;
+}

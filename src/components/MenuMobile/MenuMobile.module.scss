@@ -1,0 +1,123 @@
+.wrapper {
+  //height: 100vh;
+  //width: 100vw;
+
+//  width: 100%;
+//  height: 100%;
+//  //height: 100%;
+//  //min-width: 320px;
+  background-color: rgba(0, 0, 0, 0.9);
+//  position: fixed;
+//  top: 0px;
+//  left: 0;
+//  z-index: 99999999 !important;
+//  display: flex;
+//  flex-wrap: wrap;
+//  justify-content: start;
+//  align-items: start;
+//  opacity: 1;
+//  transition-duration: 0s;
+//  transition-property: opacity;
+//  //pointer-events: none;
+//  background-color: #fff;
+//
+//  padding: 4em 1.5em 2em 1.5em;
+//  &.active {
+//    opacity: 1;
+//    pointer-events: all;
+//    transition-duration: 0.5s;
+//  }
+//
+  background-color: white;
+}
+
+.item{
+  position: relative;
+  width: 100%;
+  color: black;
+  font-size: 1em;
+  pointer-events: auto;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  &:hover {
+    color: var(--header_color);
+  }
+  &:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 85%;
+    border-bottom: 1px solid white;
+    justify-content: center;
+    padding: 0px;
+    opacity: 0;
+    pointer-events: all;
+    transition-duration: 0.3s;
+    transition-property: opacity, width;
+  }
+  &:hover {
+    &:after {
+      position: absolute;
+      content: "";
+      width: 80%;
+      height: 85%;
+      //border-bottom: 1px solid white;
+      justify-content: center;
+      padding: 0px;
+      opacity: 1;
+      pointer-events: all;
+      transition-duration: 0.3s;
+      transition-property: opacity, width;
+    }
+    &:focus {
+      &:after {
+        position: absolute;
+        content: "";
+        width: 85%;
+        height: 80%;
+        justify-content: center;
+        border-bottom: 1px solid var(--header_color);
+      }
+    }
+  }
+  &:active {
+    &:hover {
+      &:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 80%;
+        border: none;
+        justify-content: center;
+        border-bottom: 1px solid var(--header_color);
+      }
+    }
+  }
+  &:focus {
+    &:after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 80%;
+      border-bottom: 2px solid black;
+      justify-content: center;
+      opacity: 1;
+      //z-index: 10;
+    }
+  }
+}
+
+.active {
+  color: var(--header_color_light);
+  pointer-events: none;
+  //&:focus {
+  //  pointer-events: none;
+  //  &:after {
+  //    pointer-events: none;
+  //
+  //  }
+  //}
+}

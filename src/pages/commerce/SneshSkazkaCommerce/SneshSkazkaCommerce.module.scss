@@ -1,0 +1,43 @@
+.title {
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 15px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  margin: 40px 40px 20px 40px;
+  max-width: 750px;
+}
+
+.description {
+  color: #999;
+  margin-top: 30px;
+  line-height: 1.5;
+  margin-bottom: 35px;
+  font-size: 1.5em;
+}
+
+.textElement{
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.list{
+  margin-bottom: 10px;
+  display: list-item;
+  font-size: 0.9em;
+  line-height: 1.4;
+  //text-align: justify;
+}
+

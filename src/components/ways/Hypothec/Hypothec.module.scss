@@ -1,0 +1,153 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 50px 0 15px 0;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  //margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.title {
+  font-size: 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 15px;
+}
+
+.containerInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px;
+  margin: 10px;
+  height: 100%;
+}
+
+.labelInput{
+  font-size: 0.8em;
+  line-height: 1.2;
+  color: var(--font_color_add1);
+}
+
+.boxInput {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+}
+
+.wrapInput{
+  width: 200px;
+  background-color: white;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: 5px 5px 5px 10px;
+  max-width: 120px;
+  height: 1.5em;
+  //display: flex;
+  //justify-content: flex-end;
+  //align-items: center;
+  white-space: pre-wrap;
+}
+
+.input {
+  //background-color: pink;
+  border: none;
+  display: inline-block;
+  width: 100%;
+  text-align: right;
+}
+
+.unitInput {
+  font-size: 0.8em;
+  line-height: 0.8;
+  color: var(--font_color_add1);
+  min-width: 30px;
+  background: none;
+}
+
+.button {
+  //margin: 10px 0 0 0;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px 100%;
+}
+
+.textCalc {
+  line-height: 0.4;
+  font-size: 0.8em;
+}
+
+.valCalc {
+  font-size: 1.4em;
+  color: green;
+  margin-bottom: 10px;
+}
+.valCalc:last-child {
+  margin-bottom: 0px;
+}
+
+.resultContainer {
+  justify-content: center;
+  align-content: center;
+  margin-top: 10px;
+  display: none;
+  padding: 0 20px;
+  min-width: 250px;
+}
+[data-result-active="true"].resultContainer {
+  display: flex;
+}
+
+.resultWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.valCalc > span{
+  margin-left: 4px;
+}
+
+.itemResultWrapper {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.itemResultBox {
+  font-size: 0.8em;
+  text-align: right;
+  margin: 0px 5px;
+}
+
+
+@media screen and (max-width: 420px) {
+ .containerInput {
+   flex-wrap: wrap;
+   justify-content: center;
+ }
+  .labelInput{
+    width: 145px;
+    justify-content: center;
+    line-height: 1;
+  }
+  .boxInput{
+    width: auto;
+  }
+
+  .title{
+    display: flex;
+    justify-content: center;
+  }
+
+}

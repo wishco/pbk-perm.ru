@@ -1,0 +1,97 @@
+// сайт состоит из двух частей "TOP и BOTTOM"
+
+.wrapperWidth {
+  display: block;
+  margin: 0 auto;
+  min-height: 100vw;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: 100vh;
+  flex-wrap: wrap;
+}
+
+.top {
+  position: relative;
+  background-color: var(--bg_color);
+  width: 100%;
+}
+
+.bottom {
+  width: 100%;
+  background-color: var(--footer_bg_color);
+  color: var(--footer_color);
+  //height: var(--footer_height);
+  z-index: 10;
+  margin-bottom: 20px;
+}
+
+
+//.container { // каждый контейнер
+//  display: flex;
+//  position: relative;
+//  max-width: var(--size_width_site);
+//
+//  margin: 0 auto;
+//  background-color: var(--color_bg_default);
+//  display: block;
+//  position: relative;
+//
+//  &.full {
+//    max-width: 100%;
+//  }
+//
+//  &.header {
+//    width: 100%;
+//    display: flex;
+//    flex-wrap: wrap;
+//
+//    &_bg {
+//      &:before {
+//        content: "";
+//        position: absolute;
+//        left: -120px;
+//        top: 0px;
+//        background-image: url("../Header/header.png");
+//        background-size: cover;
+//        background-position: center;
+//        width: 120px;
+//        height: 100%;
+//      }
+//      &:after {
+//        content: "";
+//        position: absolute;
+//        right: -120px;
+//        top: 0px;
+//        background-image: url("../Header/header.png");
+//        background-size: cover;
+//        background-position: center;
+//        transform: scaleX(-1);
+//        width: 120px;
+//        height: 100%;
+//      }
+//    }
+//
+//  }
+//  &.bigImage_bg {
+//    width: 100%;
+//    display: flex;
+//    flex-wrap: wrap;
+//    &:after {
+//      content: "";
+//      position: absolute;
+//      left: 0px;
+//      top: 0px;
+//      background-image: url("../../images/sneshmainBig.jpg");
+//      background-size: 100%;
+//      background-position: 0% 50%;
+//      width: 1920px;
+//      height: 720px;
+//    }
+//  }
+//
+//
+//}

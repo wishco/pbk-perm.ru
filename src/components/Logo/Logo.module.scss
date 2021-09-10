@@ -1,0 +1,51 @@
+.logo {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  z-index: 1;
+  svg {
+    margin-right: 1em;
+    width: 68px;
+    height: calc(68px/1.2);
+  }
+
+}
+
+[data-style="logo-header"] {
+}
+
+[data-style="logo-header-svg"] {
+}
+
+[data-style="logo-header-path"] {
+  fill: var(--header_color);
+ }
+
+[data-style="logo-header-p"] {
+  color: var(--header_color);
+    font-size: 2em;
+    line-height: 1;
+    margin-right: 20px;
+}
+
+
+//----------------------------------------------------------------------------------
+
+@media screen and (max-width: 570px) {
+  .logo {
+    //width: 100%;
+    margin-right: 0;
+    svg {
+      //margin-left: 0px;
+    }
+  }
+  [data-style="logo-header-p"] {
+    margin-right: 0px;
+  }
+
+}

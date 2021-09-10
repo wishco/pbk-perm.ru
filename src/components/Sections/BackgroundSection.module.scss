@@ -1,0 +1,13 @@
+.topBg {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  margin-top: 100px;
+  z-index: 0;
+  width: 100%;
+
+  svg {
+    fill: #F4F5F5;
+    z-index: 1;
+  }
+}

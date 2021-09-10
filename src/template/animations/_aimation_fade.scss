@@ -1,0 +1,33 @@
+
+[data-anim-type-fade] {
+  //background-color: red;
+  display: none;
+}
+
+[data-anim-type-fade][data-anim-value="open"] {
+    opacity: 0;
+    display: block;
+}
+[data-anim-type-fade][data-anim-value="opening"] {
+  opacity: 1;
+  display: block;
+
+}
+[data-anim-type-fade][data-anim-value="opened"] {
+  opacity: 1;
+  display: block;
+
+}
+[data-anim-type-fade][data-anim-value="close"] {
+  opacity: 1;
+  display: block;
+}
+[data-anim-type-fade][data-anim-value="closing"] {
+  opacity: 0;
+  display: block;
+}
+[data-anim-type-fade][data-anim-value="closed"] {
+  opacity: 0;
+  display: none;
+}
+

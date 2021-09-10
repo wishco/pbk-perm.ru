@@ -1,0 +1,84 @@
+#root [theme="default"] {
+
+  //-------------------------------------------------------------------------------------
+  // задаем переменные scss (к переменным обращаемся до компиляции) -----------------------------------------
+  // СЕКЦИЯ главная сайт
+  $maxWidth: 1440px; // максимальная ширина сайта
+  $gutter1: 20px; // гаттер 1
+  $bg_color: #ffffff; // цвет фона на сайте
+  $bg_color_add1: #f4f5f5; // цвет фона на сайте, дополнительный 1
+  $bg_color_add2: #FEFEFE; // цвет фона на сайте, дополнительный 2
+  $bg_color_add3: #D7CFAB; // цвет фона на сайте, дополнительный 3
+  $font_color: #5a5a5a; // цвет шрифта на сайте
+  $font_color_add1: #7c686a; // цвет шрифта на сайте, дополнительный 1
+  $font_color_add2: #ffffff; // цвет шрифта на сайте, дополнительный 2
+  $active_color: #ffbf00; // цвет активного элемента
+  $active_color_add1: #00A45C; // цвет активного элемента, дополнительный 1
+  $action_color: #6dc0ea; // цвет динамичного объекта на сайте
+  $action_color_add1: #afafaf; // цвет динамичного объекта на сайте, дополнительный 1
+  $action_color_add2: #e0000f; // цвет динамичного объекта на сайте, дополнительный 1
+
+
+    //-------------------------------------------------------------------------------------
+  // задаем переменные css (к переменным обращаемся после компиляции) ------------------------------
+  // СЕКЦИЯ родитель, главная сайт
+  --maxWidth: #{$maxWidth}; // максимальная ширина сайта
+  --gutter1: #{$gutter1}; // гаттер 1
+  --bg_color: #{$bg_color}; // цвет фона на сайте
+  --bg_color_add1: #{$bg_color_add1}; // цвет фона на сайте, дополнительный 1
+  --bg_color_add2: #{$bg_color_add2}; // цвет фона на сайте, дополнительный 2
+  --bg_color_add3: #{$bg_color_add3}; // цвет фона на сайте, дополнительный 3
+  --font_color: #{$font_color}; // цвет шрифта на сайте
+  --font_color_light: #{lighten($font_color, 15%)}; // цвет шрифта на сайте
+  --font_color_dark: #{darken($font_color, 25%)}; // цвет шрифта на сайте
+  --font_color_add1: #{$font_color_add1}; // цвет шрифта на сайте, дополнительный 1
+  --font_color_add2: #{$font_color_add2}; // цвет шрифта на сайте, дополнительный 2
+  --active_color: #{$active_color}; // цвет активного элемента
+  --active_color_light: #{lighten($active_color, 10%)}; // цвет активного элемента
+  --active_color_dark: #{darken($active_color, 10%)}; // цвет активного элемента
+  --active_color_add1: #{$active_color_add1}; // цвет активного элемента, дополнительный 1
+  --active_color_add1_light: #{lighten($active_color_add1, 5%)}; //
+  --active_color_add1_dark: #{darken($active_color_add1, 5%)}; //
+  --action_color: #{$action_color}; // цвет динамичного объекта на сайте
+  --action_color_light: #{lighten($action_color, 5%)}; // цвет динамичного объекта на сайте
+  --action_color_dark: #{darken($action_color, 5%)}; // цвет динамичного объекта на сайте
+
+  --action_color_add1: #{$action_color_add1}; // цвет динамичного объекта на сайте, дополнительный 1
+  --action_color_add1_light: #{lighten($action_color_add1, 5%)}; // цвет динамичного объекта на сайте, дополнительный 1
+  --action_color_add1_light2: #{lighten($action_color_add1, 15%)}; // цвет динамичного объекта на сайте, дополнительный 1
+  --action_color_add1_dark: #{darken($action_color_add1, 5%)}; // цвет динамичного объекта на сайте, дополнительный 1
+  --action_color_add1_dark2: #{darken($action_color_add1, 15%)}; // цвет динамичного объекта на сайте, дополнительный 1
+
+  --action_color_add2: #{$action_color_add2}; // цвет динамичного объекта на сайте, дополнительный 2
+  --action_color_add2_light: #{lighten($action_color_add2, 5%)}; // цвет динамичного объекта на сайте, дополнительный 2
+  --action_color_add2_dark: #{darken($action_color_add2, 5%)}; // цвет динамичного объекта на сайте, дополнительный 2
+
+
+
+  // СЕКЦИЯ header ..........
+  --header_color: #{$font_color_add1};
+  --header_color_light: #{lighten($font_color_add1, 35%)}; // цвет динамичного объекта на сайте, дополнительный 2
+  --header_color_dark: #{darken($font_color_add1, 15%)}; // цвет динамичного объекта на сайте, дополнительный 2
+
+  // СЕКЦИЯ footer ..........
+  --footer_height: 360px;
+  --footer_bg_color: var(--bg_color);
+  --footer_color: var(--font_color_add1);
+
+  // КОНТЕЙНЕР меню
+  $menu_color: $bg_color_add1; // цвет фона меню
+  --menu_color: #{$menu_color};
+  --menu_color_light: #{lighten($menu_color, 5%)};
+  --menu_color_dark: #{darken($menu_color, 5%)};
+  --menu_active_color: #{$active_color};
+  --menu_outside_color: #{$menu_color};
+  --menu_intside_color: #{$menu_color};
+  --menu_font_color: #{$font_color};
+
+  // КОНТЕЙНЕР лого
+  --logo_outside_color: #{$bg_color};
+  --logo_intside_color: #{$bg_color};
+
+  // ТАБЛИЦЫ
+  --table-color: #e5f0ff
+}
