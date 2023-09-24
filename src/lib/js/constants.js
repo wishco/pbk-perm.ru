@@ -1,7 +1,7 @@
 // в файле объявляем константы проекта
 export const constBuilds = {
-  SNESH_SKAZKA: 'snesh-skazka'
-}
+  SNESH_SKAZKA: "snesh-skazka",
+};
 
 export const constPlaces = {
   roomId: 0,
@@ -17,5 +17,5 @@ export const constPlaces = {
   payPartForRoom: 10,
   status: 11,
   typeRoom: 12,
-}
-
+  typeRoomPic: 13,
+};

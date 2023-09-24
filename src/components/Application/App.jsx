@@ -1,46 +1,38 @@
-import React, {useEffect} from 'react'
-import "template/globals.scss" // подключам для сайта глобальные классы стилей
-import s from './app.module.scss'
-import Site from "components/Site/Site";
+import React, { useEffect } from "react";
+import "template/globals.scss"; // подключам для сайта глобальные классы стилей
+import s from "./app.module.scss";
 import Preloader from "components/Preloader/Preloader";
 import SiteContainer from "components/Site/SiteContainer";
 
-
-
-function App({theme, initialized, initializeApp}) {
-
-
-
+function App({ theme, initialized, initializeApp }) {
   // запуск функции при запуске приложения (один раз)
   useEffect(() => {
     // setTimeout(() => initializeApp(), 15);
-    initializeApp()
-  }, [])
+    initializeApp();
+  }, []);
 
   // мониторим изменение темы сайта
-  useEffect(() => {
+  useEffect(() => {});
 
-  }, )
-
-  if (initialized === false)   {  // пока приложение не инициализированно запускаем прелоадер
+  if (initialized === false) {
+    // пока приложение не инициализированно запускаем прелоадер
     return (
       <React.StrictMode>
-        <Preloader/>
+        <Preloader />
       </React.StrictMode>
-    )
-  }
-  else {
+    );
+  } else {
     return (
-    <React.StrictMode>
+      <React.StrictMode>
         {/*<div className={s.siteArea}>*/}
         {/*</div>*/}
 
         <div className={s.wrapSite} theme={theme}>
-         <SiteContainer/>
+          <SiteContainer />
         </div>
-    </React.StrictMode>
-  )}
-
+      </React.StrictMode>
+    );
+  }
 }
 
-export default App
+export default App;

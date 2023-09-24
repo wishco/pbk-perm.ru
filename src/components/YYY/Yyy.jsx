@@ -1,16 +1,11 @@
-import React from 'react'
-import s from "./Yyyt.module.scss"
-import {useTaskAnimation} from "components/TaskAnimation/TaskAnimationContext";
+import React from "react";
 
-const Yyy = ({...data}) => {
-
+const Yyy = ({ ...data }) => {
   return (
     <>
-      <div >
-
-      </div>
+      <div></div>
     </>
-  )
-}
+  );
+};
 
-export default Yyy
+export default Yyy;
